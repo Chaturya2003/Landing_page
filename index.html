@@ -1,172 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Fruit Shop Landing Page</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="header-content-div">
+        <a href="#home-sec">
+          <img
+            src="https://i.ibb.co/KsztxWq/logo1.png"
+            alt="Company Logo"
+            id="header-img"
+        /></a>
+        <nav id="nav-bar">
+          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#varieties" class="nav-link">VARIETIES</a>
+          <a href="#our-service" class="nav-link">OUR SERVICE</a>
+          <a href="#benefits" class="nav-link">BENEFITS</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="home-sec" class="flexible home-sec">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatuFitness - The best fitness gym in the town</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="timer.js"></script>
-    <link rel="stylesheet" href="utils.css">
-</head>
+        <div class="eye-grabber">
+          <h1>Fresh, Crispy, Heavenly.</h1>
+          <h2>
+            100% Organic, vivid varieties of apples grown in Kashmir aka The
+            Heaven of Earth.
+          </h2>
+          <button class="btn" onclick="window.location.href = '#contact';">
+            Buy Now
+          </button>
+        </div>
+      </section>
+      <section id="about" class="sec-padding">
+        <h3 class="section-heading">ABOUT US</h3>
+        <div class="sec-content-div flexible">
+          <p>
+            We are a group of people with decades of experience in growing and
+            selling apples. We know what a good apple looks like and how they
+            are grown. This essential fruit requires a temperate climate, loamy
+            soil that is rich in organic matter apart from needing proper
+            drainage and aeration facilities. Lucky for us we live in Kashmir
+            which is proudly known as paradise of earth is also home to
+            temperate fruits like apple for which the state is very famous
+            across globe. The main factor which influence temperate fruit
+            bearing trees is soil, climate and environment which are highly
+            favorable and unparalleled in the province of Kashmir. Kashmiri
+            apples a unique look, taste, flavor, size and color.
+          </p>
+          <img src="https://i.ibb.co/SyKVC8M/about-img.jpg" alt="A man plucking apples from the tree" />
+        </div>
+      </section>
+     
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Pricing Page</title>
+          <link rel="stylesheet" href="styles.css">
+      </head>
+      <body>
+          <script src="script.js"></script> 
+      
+      <section id="varieties" class="sec-padding">
+        <h3 class="section-heading">VARIETIES</h3>
+        <div class="sec-content-div flexible">
+          <div class="tile">
+            <img src="https://i.ibb.co/t2x706V/amber.jpg" alt="photo of amber apples" />
+            <h4>Amber</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="130">₹130</div>
+          </div>
+            <p>
+              This red, medium-sized fruit becomes fully ripe in mid-October. It
+              is mostly grown in Shopian and Kulgam.
+            </p>
+          </div>
+          <div class="tile">
+            <img
+              src="https://i.ibb.co/H4Cnh7v/american-trel.png"
+              alt="photo of american trel apples"
+            />
+            <h4>American Trel</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="160">₹160</div>
+          </div>
+            <p>
+              A small, rounded, very crispy and sweet fruit variety that ripens
+              in mid-September.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://i.ibb.co/jTDgqYB/red-delicious.png" alt="photo of red delicious apple" />
+            <h4>Red Delicious</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="125">₹125</div>
+          </div>
+            <p>
+              A very popular and widely cultivated variety of apple that ripens
+              in mid-September. Its flesh is greenish white, grainy and juicy.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://i.ibb.co/MSvg1QN/maharaja.png" alt="photo of Maharaej apples" />
+            <h4>Maharaej</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="150">₹140</div>
 
-<body class='overflow-x-hidden'>
-    <div class="container mx-auto">
-        <header>
-            <nav class="flex justify-between">
-                <div class="logo font-bold flex items-center text-blue">ChatuFitness</div>
-                <ul class="navbar flex items-center">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Contact Us</li>
-                    <li><button class="btn">Join Now</button></li>
-                </ul>
-            </nav>
-            <hr>
-        </header>
-        <main class="min-h-screen">
-            <section class="section1">
-                <div class="flex">
-                    <div class="topleft flex flex-col justify-center px-2">
-                        <div class=" text-center">
-                            <img class="dumbellimg" src="Chatu.jpeg" alt="">
-                        </div>
-                        <h1 class="my-1 text-center">The best fitness Gym in the town is here</h1>
-                        <p class=" text-center">ChatuFitness Gym offers a holistic approach to wellness, blending state-of-the-art equipment, expert trainers, and personalized fitness plans. With a focus on community and individual progress, our gym provides diverse classes, nutritional guidance, and motivational support. Whether you're a beginner or seasoned athlete, we cater to all levels, fostering a welcoming environment for achieving fitness goals. Join us at ChatuFitness Gym and embark on a journey to a healthier, happier you..</p>
-                            <!-- Display the countdown timer in an element -->
-                            <p class="deal text-center">The deal ends in <span id="demo"></span></p>
-                            <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Countdown Timer</title>
-</head>
-<body>
-
-<!-- Replace 'https://www.tickcounter.com/countdown/4889392/my-countdown' with your countdown link -->
-<iframe src="https://www.tickcounter.com/countdown/4889392/my-countdown" width="300" height="150" frameborder="0" scrolling="no"></iframe>
-
-</body>
-</html>
-
-                            <div class="buttons">
-                                <button class="btn">Join now</button>
-                                <button class="btn">Contact Us</button>
-                            </div>
-                    </div>
-                    <div class="topright flex justify-center">
-                        <img class="gymimg" src="dumbelll.jpg" alt="">
-                    </div>
-                </div>
-            </section>
-            <hr>
-            <section class="section2">
-                <h1 class="text-center my-2">Pricing</h1>
-                <p class="my-2">
-                    At ChatuFitness Gym, we offer flexible pricing plans tailored to your needs, ensuring affordability without compromising quality. From monthly memberships to pay-as-you-go options, we provide accessibility to our top-notch facilities and expert guidance. With transparent pricing and no hidden fees, you can easily find a plan that fits your budget. Join our fitness community today and experience premium services at competitive rates.</p>
-                <div class="boxes flex justify-center">
-                    <div class="box">
-                        <h2>Gold Membership</h2>
-                        <ul>
-                            <li class="highlighted">₹1500/month</li>
-                            <li>Access to gym facilities and basic equipment.</li>
-                            <li>Limited access to group fitness classes</li>
-                            <li>No personalized training sessions included</li>
-                            <li>No access to premium amenities like swimming pool or sauna
-                            </li>
-                            <li><button class="btn">Signup Now</button></li>
-                        </ul>
-                    </div>
-                    <div class="box">
-                        <h2>Platinum Membership</h2>
-                        <ul>
-                            <li class="highlighted">₹2500/month</li>
-                            <li>All benefits of Gold Membership</li>
-                            <li>Priority booking for group fitness classes and premium amenities</li>
-                            <li>Higher discounts on personal training sessions</li>
-                            <li>Complimentary guest passes for friends or family</li>
-                            <li><button class="btn">Signup Now</button></li>
-                        </ul>
-                    </div>
-                    <div class="box">
-                        <h2>Diamond Membership</h2>
-                        <ul>
-                            <li class="highlighted">₹4000/month</li>
-                            <li>Exclusive access to VIP areas or equipment</li>
-                            <li>Unlimited complimentary personal training sessions</li>
-                            <li>Customized nutrition plans.</li>
-                            <li>Priority access to special events or promotions</li>
-                            <li><button class="btn">Signup Now</button></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </section>
-            <hr>
-            <section class="section3">
-                <h1 class="text-center my-2">Compare Plans</h1>
-                <div class="container plantable">
-                    <table class="table text-center">
-                      <thead>
-                        <tr>
-                          <th></th><th>Gold Membership</th>
-                          <th>Platinum Membership.</th>
-                          <th>Diamond Membership</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row" class="text-start">Public</th>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-start">Private</th>
-                          <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                        </tr>
-                      </tbody>
-              
-                      <tbody>
-                        <tr>
-                          <th scope="row" class="text-start">Permissions</th>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-start">Sharing</th>
-                          <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-start">Unlimited members</th>
-                          <td>-</td>
-                          <td>Yes</svg></td>
-                          <td>Yes</svg></td>
-                        </tr>
-                        <tr>
-                          <th scope="row" class="text-start">Extra security</th>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>Yes</svg></td>
-                        </tr>
-                      </tbody>
-                    </table>
-            </section>
-            <hr>
-        </main>
-        <footer>
-            Copyright &copy; HarryFitness.com | All rights reserved
-        </footer>
-
-    </div>
-</body>
-
+          </div>
+            <p>
+              A large apple with red and green color. It tastes a bit sour but
+              sweetens with time and is available by late October.
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://i.ibb.co/zVR1LB2/hazal.png/" alt="photo of Hazratbael apples" />
+            <h4>Hazratbael</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="150">₹150</div>             
+          </div>
+            <p>
+              A quickly perishable variety that ripens in early July. It is the
+              oldest variety of apples cultivated in the valley and is mostly
+              consumed domestically
+            </p>
+          </div>
+          <div class="tile">
+            <img src="https://i.ibb.co/BNFrnZn/golden.png" alt="photo of Golden Delicious apples" />
+            <h4>Golden Delicious</h4>
+            <div class="prices">
+              <div class="price" data-price-inr="190">₹190</div>
+          </div>
+            <p>
+              A variety with comparatively longer shelf life, it is crispy,
+              juicy and has thick greenish-white flesh which turns golden upon
+              ripening. It is available till January.
+            </p>
+          </div>
+        </div>
+        <button id="change-currency-btn">Change Currency</button>
+      </section>
+      <section id="our-service" class="sec-padding">
+        <h3 class="section-heading">OUR SERVICE</h3>
+        <div class="sec-content-div">
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/w6H542X/Fresh.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Fresh</h5>
+              <p>We deliver fresh apples with a 100% guarantee of freshness.</p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/FKNq4Qr/delivered.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Fast</h5>
+              <p>
+                We deliver your orders as fast as possible, delivery procedure
+                begins as soon as apple is plucked from tree.
+              </p>
+            </div>
+          </div>
+          <div class="bars">
+            <div class="icon-container">
+              <img src="https://i.ibb.co/HHQK1wV/happy.png" alt="" />
+            </div>
+            <div class="txt-container">
+              <h5>Satisfying</h5>
+              <p>
+                We guarantee 100% customer satisfaction. We do our best to make
+                your purchase experience smooth. But if we mess up somehow you
+                will get compensated for every inconvenience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="benefits" class="sec-padding">
+        <h3 class="section-heading">BENEFITS</h3>
+        <div class="sec-content-div flexible">
+          <iframe
+            id="video"
+            width="560"
+            title="Benefits of Apple"
+            height="315"
+            src="https://www.youtube.com/embed/W_JOJNztrnI"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+      <section class="sec-padding" id="contact">
+        <h3 class="section-heading">CONTACT</h3>
+        <div class="sec-content-div flexible">
+          <h6>To make an order or just to know more contact us :</h6>
+          <form
+            id="form"
+            action="https://mail.google.com/mail/u/0/#inbox?compose=new"
+            method="POST"
+          >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your Email Address"
+              required
+            />
+            <input type="submit" class="btn" id="submit" value="Know More" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Created by
+      <a href="#">CHUKKALA CHATURYA</a>
+    </footer>
+  </body>
+  </body>
 </html>
