@@ -1,33 +1,31 @@
-// Function to update the countdown
-function updateCountdown() {
-    // Target date and time (Feb 15th, 11:59 PM)
-    const targetDate = new Date('2024-02-15T23:59:00').getTime();
+document.addEventListener('DOMContentLoaded', function() {
+    const prices = document.querySelectorAll('.price');
+    const changeCurrencyBtn = document.getElementById('change-currency-btn');
 
-    // Update the countdown every second
-    setInterval(() => {
-        // Get the current date and time
-        const now = new Date().getTime();
+    const INR_TO_USD = 0.014; // Conversion rate: 1 INR = 0.014 USD
 
-        // Calculate the remaining time
-        const distance = targetDate - now;
+    function convertToUSD() {
+        prices.forEach(price => {
+            const priceInr = parseFloat(price.dataset.priceInr);
+            const priceUsd = (priceInr * INR_TO_USD).toFixed(2);
+            price.textContent = '$' + priceUsd;
+        });
+    }
 
-        // Calculate days, hours, minutes, and seconds
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    function convertToINR() {
+        prices.forEach(price => {
+            const priceInr = parseFloat(price.dataset.priceInr);
+            price.textContent = '₹' + priceInr;
+        });
+    }
 
-        // Display the countdown
-        const countdownElement = document.getElementById('countdown');
-        countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
-        // If the countdown is over, stop the timer
-        if (distance < 0) {
-            clearInterval(updateCountdown);
-            countdownElement.innerHTML = 'EXPIRED';
+    changeCurrencyBtn.addEventListener('click', function() {
+        if (changeCurrencyBtn.textContent === 'Change to USD') {
+            convertToUSD();
+            changeCurrencyBtn.textContent = 'Change to INR';
+        } else {
+            convertToINR();
+            changeCurrencyBtn.textContent = 'Change to USD';
         }
-    }, 1000);
-}
-
-// Call the function to start the countdown
-updateCountdown();
+    });
+});
